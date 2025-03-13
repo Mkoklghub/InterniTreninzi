@@ -18,14 +18,14 @@ public class LoginTest {
         loginPage.mainLoginPage();
         String currentUrl = loginPage.currentUrl();
         assertEquals("The current URL should be http://akademija1.unix.fina.hr:8081/prijava",
-                "http://akademija1.unix.fina.hr:8081/prijava", currentUrl);
+                "https://akademija.fina.hr/prijava", currentUrl);
     }
 
     @Test
     public void loginInPage() {
         loginPage.login();
         String currentUrl = loginPage.currentUrl();
-        assertEquals("The current URL should be http://akademija1.unix.fina.hr:8081","http://akademija1.unix.fina.hr:8081/", currentUrl);
+        assertEquals("The current URL should be https://akademija.fina.hr/","https://akademija.fina.hr/", currentUrl);
     }
 
 }

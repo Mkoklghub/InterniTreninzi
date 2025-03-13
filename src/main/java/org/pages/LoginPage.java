@@ -16,13 +16,13 @@ public class LoginPage {
 
     public void mainLoginPage() {
         driver = driverSetup.setUp();
-        driver.get("http://akademija1.unix.fina.hr:8081/prijava");
+        driver.get("https://akademija.fina.hr/prijava");
     }
 
 
     public void login() {
         driver = driverSetup.setUp();
-        driver.get("http://akademija1.unix.fina.hr:8081/prijava");
+        driver.get("https://akademija.fina.hr/prijava");
 
         // Locate the username and password fields
         WebElement usernameField = driver.findElement(By.id("username"));
@@ -37,7 +37,7 @@ public class LoginPage {
         submitButton.click();
 
         WebDriverWait wait = new WebDriverWait(driver, 10);
-        wait.until(ExpectedConditions.urlToBe("http://akademija1.unix.fina.hr:8081/"));
+        wait.until(ExpectedConditions.urlToBe("https://akademija.fina.hr/"));
 
         // Add assertions here to verify successful login
     }
